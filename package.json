@@ -1,5 +1,5 @@
 {
-  "name": "@scaleleap/typescript-template",
+  "name": "@scaleleap/puppeteer",
   "description": "",
   "license": "MIT",
   "author": {
@@ -7,7 +7,7 @@
     "email": "roman@scaleleap.com",
     "url": "https://www.scaleleap.com/"
   },
-  "homepage": "https://github.com/ScaleLeap/.../#readme",
+  "homepage": "https://github.com/ScaleLeap/puppeteer/#readme",
   "version": "0.0.0",
   "main": "lib/index.js",
   "files": [
@@ -27,6 +27,7 @@
   "types": "lib/index.d.ts",
   "devDependencies": {
     "@types/jest": "25.2.1",
+    "@types/lodash.memoize": "4.1.6",
     "@types/node": "13.11.0",
     "@typescript-eslint/eslint-plugin": "2.26.0",
     "@typescript-eslint/parser": "2.26.0",
@@ -43,12 +44,23 @@
     "rimraf": "3.0.2",
     "ts-jest": "25.3.1",
     "ts-node": "8.8.2",
-    "ts-node-dev": "1.0.0-pre.44",
     "tsconfigs": "4.0.2",
     "typescript": "3.8.3"
   },
-  "keywords": [],
+  "keywords": [
+    "puppeteer"
+  ],
   "publishConfig": {
-    "access": "private"
+    "access": "public"
+  },
+  "dependencies": {
+    "@scaleleap/config": "1.5.1",
+    "@types/puppeteer-core": "2.0.0",
+    "chrome-launcher": "0.13.1",
+    "deepmerge": "4.2.2",
+    "lodash.memoize": "4.1.2",
+    "puppeteer-core": "2.1.1",
+    "puppeteer-extra": "3.1.9",
+    "puppeteer-extra-plugin-stealth": "2.4.9"
   }
 }
