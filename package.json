@@ -20,12 +20,24 @@
     "dev": "ts-node-dev --respawn --transpileOnly src",
     "lint": "eslint --ext ts,js src/ test/",
     "lint:fix": "npm run lint -- --fix",
+    "semantic-release": "semantic-release",
     "start": "ts-node --transpile-only --pretty src",
     "test": "jest",
     "test:watch": "jest --watchAll"
   },
   "types": "lib/index.d.ts",
+  "dependencies": {
+    "@scaleleap/config": "1.5.1",
+    "@types/puppeteer-core": "2.0.0",
+    "chrome-launcher": "0.13.1",
+    "deepmerge": "4.2.2",
+    "lodash.memoize": "4.1.2",
+    "puppeteer-core": "2.1.1",
+    "puppeteer-extra": "3.1.9",
+    "puppeteer-extra-plugin-stealth": "2.4.9"
+  },
   "devDependencies": {
+    "@scaleleap/semantic-release-config": "1.1.4",
     "@types/jest": "25.2.1",
     "@types/lodash.memoize": "4.1.6",
     "@types/node": "13.11.0",
@@ -53,14 +65,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
-    "@scaleleap/config": "1.5.1",
-    "@types/puppeteer-core": "2.0.0",
-    "chrome-launcher": "0.13.1",
-    "deepmerge": "4.2.2",
-    "lodash.memoize": "4.1.2",
-    "puppeteer-core": "2.1.1",
-    "puppeteer-extra": "3.1.9",
-    "puppeteer-extra-plugin-stealth": "2.4.9"
+  "release": {
+    "extends": "@scaleleap/semantic-release-config",
+    "branch": "master"
   }
 }
