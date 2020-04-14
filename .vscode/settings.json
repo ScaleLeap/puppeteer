@@ -1,0 +1,40 @@
+{
+  "eslint.validate": [
+    "typescript",
+    "javascript"
+  ],
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "files.exclude": {
+    ".github": true,
+    ".vscode": true,
+    "lib": true,
+    "node_modules": true,
+    ".eslintrc.js": true,
+    ".eslintcache": true,
+    ".gitignore": true,
+    ".huskyrc.js": true,
+    ".nvmrc": true,
+    ".prettierrc.js": true,
+    "jest.config.js": true,
+    "package-lock.json": true,
+    "renovate.json": true,
+    "tsconfig.build.json": true,
+    "tsconfig.json": true,
+    "LICENSE": true,
+  },
+  "search.exclude": {
+    "lib/**": true,
+    "node_modules/**": true,
+    ".eslintcache": true,
+  },
+  "files.watcherExclude": {
+    "lib/**": true,
+    "node_modules/**": true,
+    ".eslintcache": true,
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.suggest.autoImports": true,
+}
