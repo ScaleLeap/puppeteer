@@ -1,5 +1,8 @@
 import { locateChromeExecutable, hasExtras, launch } from './puppeteer'
 
+// Some of the tests in this file are really slow.
+jest.setTimeout(20 * 1000)
+
 describe('puppeteer', () => {
   describe(locateChromeExecutable.name, () => {
     it('should return a path', () => {
