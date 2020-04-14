@@ -18,7 +18,7 @@
     "build": "tsc --build tsconfig.build.json",
     "clean": "rimraf lib",
     "dev": "ts-node-dev --respawn --transpileOnly src",
-    "lint": "eslint --ext ts,js src/ test/",
+    "lint": "eslint --ext ts,js src/",
     "lint:fix": "npm run lint -- --fix",
     "semantic-release": "semantic-release",
     "start": "ts-node --transpile-only --pretty src",
