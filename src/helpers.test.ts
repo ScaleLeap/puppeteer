@@ -1,4 +1,3 @@
-import { Browser } from 'puppeteer-core'
 import { clickAndWait } from './helpers'
 import { launch } from './puppeteer'
 
