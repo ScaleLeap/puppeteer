@@ -34,6 +34,12 @@ const await browser = launch({
 
 ```
 
+## Helper Functions
+
+### clickAndWait(page: Page, selector: string, clickOptions?: ClickOptions, navigationOptions?: NavigationOptions)
+
+Clicks and waits for network request to complete and resolves.
+
 ## Environment Variables
 
 The following environment variables are available:
