@@ -27,7 +27,6 @@
   },
   "types": "lib/index.d.ts",
   "dependencies": {
-    "@scaleleap/config": "1.5.1",
     "@types/puppeteer-core": "2.0.0",
     "chrome-launcher": "0.13.1",
     "deepmerge": "4.2.2",
@@ -37,6 +36,7 @@
     "puppeteer-extra-plugin-stealth": "2.4.9"
   },
   "devDependencies": {
+    "@scaleleap/config": "1.5.1",
     "@scaleleap/semantic-release-config": "1.1.6",
     "@types/jest": "25.2.1",
     "@types/lodash.memoize": "4.1.6",
@@ -58,6 +58,9 @@
     "ts-node": "8.9.0",
     "tsconfigs": "4.0.2",
     "typescript": "3.8.3"
+  },
+  "peerDependencies": {
+    "@scaleleap/config": "^1.5.1"
   },
   "keywords": [
     "puppeteer"
