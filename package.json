@@ -21,7 +21,7 @@
     "lint": "eslint --ext ts,js src/",
     "lint:fix": "npm run lint -- --fix",
     "semantic-release": "semantic-release",
-    "start": "ts-node --transpile-only --pretty src",
+    "start": "ts-node --transpile-only --pretty test/run",
     "test": "jest",
     "test:watch": "jest --watchAll"
   },
