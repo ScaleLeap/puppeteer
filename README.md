@@ -62,6 +62,12 @@ heroku buildpacks:set heroku/nodejs
 heroku buildpacks:add heroku/google-chrome
 ```
 
+## References
+
+* [Puppeteer Docs](https://pptr.dev/)
+* [Puppeteer API](https://github.com/puppeteer/puppeteer/blob/master/docs/api.md)
+* [List of Chromium Command Line Switches](https://peter.sh/experiments/chromium-command-line-switches/)
+
 ## Contributing
 
 This repository uses [Conventional Commit](https://www.conventionalcommits.org/) style commit messages.
