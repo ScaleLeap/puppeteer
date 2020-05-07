@@ -3,6 +3,13 @@
           All notable changes to this project will be documented in this file.
           See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.4](https://github.com/ScaleLeap/puppeteer/compare/v1.1.3...v1.1.4) (2020-05-07)
+
+
+### Bug Fixes
+
+* **deps:** update dependency puppeteer-core to v3.0.4 ([187137c](https://github.com/ScaleLeap/puppeteer/commit/187137c85643212e3c1ab07e4fc4fca84c0cc6fe))
+
 ## [1.1.3](https://github.com/ScaleLeap/puppeteer/compare/v1.1.2...v1.1.3) (2020-05-06)
 
 
