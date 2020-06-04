@@ -57,7 +57,7 @@
     "ts-jest": "25.4.0",
     "ts-node": "8.10.2",
     "tsconfigs": "4.0.2",
-    "typescript": "3.9.3"
+    "typescript": "3.9.5"
   },
   "peerDependencies": {
     "@scaleleap/config": "1.6.1"
