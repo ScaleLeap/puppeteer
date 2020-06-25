@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@scaleleap/config": "1.6.1",
-    "@scaleleap/semantic-release-config": "1.1.11",
+    "@scaleleap/semantic-release-config": "1.1.12",
     "@types/jest": "25.2.3",
     "@types/lodash.memoize": "4.1.6",
     "@types/node": "13.13.4",
