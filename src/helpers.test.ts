@@ -4,7 +4,7 @@ import { launch } from './puppeteer'
 jest.setTimeout(20 * 1000)
 
 describe('helpers', () => {
-  describe(clickAndWait.name, () => {
+  describe(`${clickAndWait.name}`, () => {
     it('should click and wait', async () => {
       expect.assertions(1)
 
@@ -14,13 +14,14 @@ describe('helpers', () => {
         const page = await browser.newPage()
         await page.goto('http://example.com/', { waitUntil: 'networkidle2' })
 
-        const res = await clickAndWait(page, 'a')
+        const responase = await clickAndWait(page, 'a')
 
-        expect(res.ok()).toBe(true)
-      } catch (e) {
-        expect(e).toBeFalsy()
+        expect(responase.ok()).toBe(true)
+      } catch (error) {
+        // eslint-disable-next-line jest/no-try-expect
+        expect(error).not.toBeInstanceOf(Error)
       } finally {
-        return browser.close()
+        await browser.close()
       }
     })
   })

@@ -1,12 +1,16 @@
-import { launch, clickAndWait } from './index'
+import { clickAndWait, launch } from '.'
 import { launch as puppeteerLaunch } from './puppeteer'
 
 describe('index', () => {
   it('should export our custom launch function', () => {
-    expect(launch).toEqual(puppeteerLaunch)
+    expect.assertions(1)
+
+    expect(launch).toStrictEqual(puppeteerLaunch)
   })
 
   it(`should export ${clickAndWait.name} helper`, () => {
-    expect(clickAndWait).toBeTruthy()
+    expect.assertions(1)
+
+    expect(clickAndWait).toBeDefined()
   })
 })

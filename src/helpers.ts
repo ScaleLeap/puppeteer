@@ -1,4 +1,4 @@
-import { Page, ClickOptions, NavigationOptions } from 'puppeteer-core'
+import { ClickOptions, NavigationOptions, Page } from 'puppeteer-core'
 
 /**
  * Clicks a link and waits for network request to complete.
