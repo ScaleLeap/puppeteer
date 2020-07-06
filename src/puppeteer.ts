@@ -1,10 +1,11 @@
-import puppeteer, { LaunchOptions, executablePath } from 'puppeteer-core'
-import { addExtra } from 'puppeteer-extra'
-import puppeteerExtraPluginStealth from 'puppeteer-extra-plugin-stealth'
-import deepmerge from 'deepmerge'
-import memoize from 'lodash.memoize'
 import * as chromeFinder from 'chrome-launcher/dist/chrome-finder'
 import * as utils from 'chrome-launcher/dist/utils'
+import deepmerge from 'deepmerge'
+import memoize from 'lodash.memoize'
+import puppeteer, { executablePath, LaunchOptions } from 'puppeteer-core'
+import { addExtra } from 'puppeteer-extra'
+import puppeteerExtraPluginStealth from 'puppeteer-extra-plugin-stealth'
+
 import { Config } from './config'
 
 /**
@@ -85,20 +86,18 @@ export function hasExtras(extra?: PuppeteerExtra) {
  */
 export function launch(options: LaunchOptionsExtended = {}) {
   const config = new Config()
-  const opts = deepmerge<LaunchOptionsExtended>(puppeteerDefaultOptions(config), options)
+  const options_ = deepmerge<LaunchOptionsExtended>(puppeteerDefaultOptions(config), options)
 
   // if we are not enabling any extras, then just return a default puppeteer-core instance
-  if (!hasExtras(opts.extra)) {
-    return puppeteer.launch(opts)
+  if (!hasExtras(options_.extra)) {
+    return puppeteer.launch(options_)
   }
 
   const puppeteerExtra = addExtra(puppeteer)
 
-  if (opts.extra) {
-    if (opts.extra.stealth) {
-      puppeteerExtra.use(puppeteerExtraPluginStealth())
-    }
+  if (options_.extra && options_.extra.stealth) {
+    puppeteerExtra.use(puppeteerExtraPluginStealth())
   }
 
-  return puppeteerExtra.launch(opts)
+  return puppeteerExtra.launch(options_)
 }

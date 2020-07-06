@@ -1,42 +1,54 @@
-import { locateChromeExecutable, hasExtras, launch } from './puppeteer'
+import { hasExtras, launch, locateChromeExecutable } from './puppeteer'
 
 // Some of the tests in this file are really slow.
-jest.setTimeout(20 * 1000)
+jest.setTimeout(30 * 1000)
 
 describe('puppeteer', () => {
-  describe(locateChromeExecutable.name, () => {
+  describe(`${locateChromeExecutable.name}`, () => {
     it('should return a path', () => {
-      expect(locateChromeExecutable()).toBeTruthy()
+      expect.assertions(1)
+
+      expect(locateChromeExecutable()).toBeDefined()
     })
   })
 
-  describe(hasExtras.name, () => {
+  describe(`${hasExtras.name}`, () => {
     it('should return false when no params are given', () => {
+      expect.assertions(1)
+
       expect(hasExtras()).toBe(false)
     })
 
     it('should return false when one of the plugins is explicitly disabled', () => {
+      expect.assertions(1)
+
       expect(hasExtras({ stealth: false })).toBe(false)
     })
 
     it('should return true when one of the plugins is enabled', () => {
+      expect.assertions(1)
+
       expect(hasExtras({ stealth: true })).toBe(true)
     })
   })
 
-  describe(launch.name, () => {
+  describe(`${launch.name}`, () => {
     it('should launch without extras', async () => {
+      expect.assertions(1)
+
       const browser = await launch({ extra: undefined, headless: true })
 
-      expect(browser).toBeTruthy()
+      expect(browser).toBeDefined()
 
       await browser.close()
     })
 
     it('should launch with extras', async () => {
+      expect.assertions(1)
+
       const browser = await launch({ extra: { stealth: true }, headless: true })
 
-      expect(browser).toBeTruthy()
+      expect(browser).toBeDefined()
 
       await browser.close()
     })

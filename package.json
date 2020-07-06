@@ -35,9 +35,13 @@
     "puppeteer-extra": "3.1.9",
     "puppeteer-extra-plugin-stealth": "2.4.9"
   },
+  "peerDependencies": {
+    "@scaleleap/config": "2.0.2"
+  },
   "devDependencies": {
     "@scaleleap/config": "2.0.2",
     "@scaleleap/semantic-release-config": "1.1.12",
+    "@scaleleap/utils": "1.7.4",
     "@types/jest": "26.0.3",
     "@types/lodash.memoize": "4.1.6",
     "@types/node": "13.13.4",
@@ -48,9 +52,6 @@
     "ts-node": "8.10.2",
     "tsconfigs": "4.0.2",
     "typescript": "3.9.6"
-  },
-  "peerDependencies": {
-    "@scaleleap/config": "2.0.2"
   },
   "keywords": [
     "puppeteer"
