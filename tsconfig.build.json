@@ -1,13 +1,6 @@
 {
-  "extends": "tsconfigs/nodejs-module",
+  "extends": "./tsconfig",
   "compilerOptions": {
-    "lib": [
-      "ESNext",
-      // Need to add DOM, because Puppeteer typings refer to browser types.
-      // https://stackoverflow.com/a/57999790
-      // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/24419
-      "DOM"
-    ],
     "outDir": "lib"
   },
   "exclude": [

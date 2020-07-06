@@ -1,5 +1,15 @@
 {
   "extends": "tsconfigs/nodejs-module",
+  "compilerOptions": {
+    "lib": [
+      "ES2019",
+      // Need to add DOM, because Puppeteer typings refer to browser types.
+      // https://stackoverflow.com/a/57999790
+      // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/24419
+      "DOM"
+    ],
+    "target": "ES2019"
+  },
   "include": [
     "src/**/*.ts",
     "test/**/*.ts"
