@@ -1,8 +1,6 @@
 import { clickAndWait } from './helpers'
 import { launch } from './puppeteer'
 
-jest.setTimeout(20 * 1000)
-
 describe('helpers', () => {
   describe(`${clickAndWait.name}`, () => {
     it('should click and wait', async () => {
