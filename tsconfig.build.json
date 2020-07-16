@@ -4,8 +4,8 @@
     "outDir": "lib"
   },
   "exclude": [
-    "src/**.test.ts",
-    "test/**",
+    "src/**/*.test.ts",
+    "test",
     "dangerfile.ts"
   ]
 }
