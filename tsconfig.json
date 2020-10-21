@@ -8,7 +8,12 @@
       // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/24419
       "DOM"
     ],
-    "target": "ES2019"
+    "target": "ES2019",
+    "types": [
+      "jest",
+      "lodash.memoize",
+      "node"
+    ]
   },
   "include": [
     "src/**/*.ts",
