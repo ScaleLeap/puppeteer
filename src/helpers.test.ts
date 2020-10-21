@@ -12,9 +12,9 @@ describe('helpers', () => {
         const page = await browser.newPage()
         await page.goto('https://httpstat.us/', { waitUntil: 'networkidle2' })
 
-        const responase = await clickAndWait(page, 'p a[href$="200"]')
+        const response = await clickAndWait(page, 'p a[href$="200"]')
 
-        expect(responase.ok()).toBe(true)
+        expect(response.ok()).toBe(true)
       } finally {
         await browser.close()
       }
