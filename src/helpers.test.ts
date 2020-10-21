@@ -10,14 +10,11 @@ describe('helpers', () => {
 
       try {
         const page = await browser.newPage()
-        await page.goto('http://example.com/', { waitUntil: 'networkidle2' })
+        await page.goto('https://httpstat.us/', { waitUntil: 'networkidle2' })
 
-        const responase = await clickAndWait(page, 'a')
+        const responase = await clickAndWait(page, 'p a[href$="200"]')
 
         expect(responase.ok()).toBe(true)
-      } catch (error) {
-        // eslint-disable-next-line jest/no-try-expect
-        expect(error).not.toBeInstanceOf(Error)
       } finally {
         await browser.close()
       }
