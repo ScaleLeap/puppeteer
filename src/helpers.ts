@@ -1,4 +1,8 @@
-import { ClickOptions, NavigationOptions, Page } from 'puppeteer-core'
+import { ClickOptions, NavigationOptions, Page, Response } from 'puppeteer-core'
+
+const DEFAULT_NAVIGATION_OPTIONS: NavigationOptions = {
+  waitUntil: 'networkidle2',
+}
 
 /**
  * Clicks a link and waits for network request to complete.
@@ -7,10 +11,8 @@ export async function clickAndWait(
   page: Page,
   selector: string,
   clickOptions: ClickOptions = {},
-  navigationOptions: NavigationOptions = {
-    waitUntil: 'networkidle2',
-  },
-) {
+  navigationOptions = DEFAULT_NAVIGATION_OPTIONS,
+): Promise<Response> {
   const wait = page.waitForNavigation(navigationOptions)
 
   const click = page.click(selector, clickOptions)

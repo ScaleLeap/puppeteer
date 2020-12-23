@@ -2,7 +2,7 @@ import * as chromeFinder from 'chrome-launcher/dist/chrome-finder'
 import * as utils from 'chrome-launcher/dist/utils'
 import deepmerge from 'deepmerge'
 import memoize from 'lodash.memoize'
-import puppeteer, { executablePath, LaunchOptions } from 'puppeteer-core'
+import puppeteer, { Browser, executablePath, LaunchOptions } from 'puppeteer-core'
 import { addExtra } from 'puppeteer-extra'
 import puppeteerExtraPluginStealth from 'puppeteer-extra-plugin-stealth'
 
@@ -15,7 +15,7 @@ import { Config } from './config'
  *
  * It is recommended to explicitly set an executable path.
  */
-export function locateChromeExecutable(platform = utils.getPlatform()) {
+export function locateChromeExecutable(platform = utils.getPlatform()): string {
   switch (platform) {
     case 'darwin':
       return chromeFinder.darwin()[0]
@@ -70,7 +70,7 @@ function puppeteerDefaultOptions(config: Config): LaunchOptionsExtended {
 /**
  * Detect if we have extras enabled.
  */
-export function hasExtras(extra?: PuppeteerExtra) {
+export function hasExtras(extra?: PuppeteerExtra): boolean {
   if (!extra) {
     return false
   }
@@ -84,7 +84,7 @@ export function hasExtras(extra?: PuppeteerExtra) {
  *
  * The `stealth` option is enabled by default.
  */
-export function launch(options: LaunchOptionsExtended = {}) {
+export function launch(options: LaunchOptionsExtended = {}): Promise<Browser> {
   const config = new Config()
   const options_ = deepmerge<LaunchOptionsExtended>(puppeteerDefaultOptions(config), options)
 
