@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@scaleleap/config": "2.0.4",
-    "@scaleleap/utils": "1.8.55",
+    "@scaleleap/utils": "1.8.56",
     "@types/jest": "26.0.15",
     "@types/lodash.memoize": "4.1.6",
     "@types/node": "14.14.10",
