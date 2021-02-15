@@ -3,6 +3,13 @@
           All notable changes to this project will be documented in this file.
           See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.39](https://github.com/ScaleLeap/puppeteer/compare/v1.1.38...v1.1.39) (2021-02-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency puppeteer-extra to v3.1.17 ([35c47ac](https://github.com/ScaleLeap/puppeteer/commit/35c47acd93790331855b49cb0db18cf106646492))
+
 ## [1.1.38](https://github.com/ScaleLeap/puppeteer/compare/v1.1.37...v1.1.38) (2021-02-03)
 
 
