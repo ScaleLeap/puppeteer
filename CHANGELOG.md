@@ -3,6 +3,13 @@
           All notable changes to this project will be documented in this file.
           See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.42](https://github.com/ScaleLeap/puppeteer/compare/v1.1.41...v1.1.42) (2021-03-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency puppeteer-extra-plugin-stealth to v2.7.6 ([49c94db](https://github.com/ScaleLeap/puppeteer/commit/49c94dbc54c65fd87f14be5cba12a566c966d6d6))
+
 ## [1.1.41](https://github.com/ScaleLeap/puppeteer/compare/v1.1.40...v1.1.41) (2021-03-15)
 
 
