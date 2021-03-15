@@ -32,7 +32,7 @@
     "deepmerge": "4.2.2",
     "lodash.memoize": "4.1.2",
     "puppeteer-core": "5.5.0",
-    "puppeteer-extra": "3.1.17",
+    "puppeteer-extra": "3.1.18",
     "puppeteer-extra-plugin-stealth": "2.7.5"
   },
   "peerDependencies": {
