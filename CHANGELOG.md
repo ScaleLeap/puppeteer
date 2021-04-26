@@ -3,6 +3,13 @@
           All notable changes to this project will be documented in this file.
           See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.44](https://github.com/ScaleLeap/puppeteer/compare/v1.1.43...v1.1.44) (2021-04-26)
+
+
+### Bug Fixes
+
+* lock version back to 1 ([f7f9e9d](https://github.com/ScaleLeap/puppeteer/commit/f7f9e9d07d16593f2e03315a73708d00f73f75e4))
+
 ## [1.1.43](https://github.com/ScaleLeap/puppeteer/compare/v1.1.42...v1.1.43) (2021-04-26)
 
 
