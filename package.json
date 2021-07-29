@@ -43,7 +43,7 @@
     "@scaleleap/utils": "1.9.44",
     "@types/jest": "26.0.23",
     "@types/lodash.memoize": "4.1.6",
-    "@types/node": "14.17.4",
+    "@types/node": "14.17.6",
     "danger": "10.6.6",
     "jest": "27.0.6",
     "rimraf": "3.0.2",
