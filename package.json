@@ -33,7 +33,7 @@
     "lodash.memoize": "4.1.2",
     "puppeteer-core": "5.5.0",
     "puppeteer-extra": "3.2.3",
-    "puppeteer-extra-plugin-stealth": "2.8.1"
+    "puppeteer-extra-plugin-stealth": "2.8.2"
   },
   "peerDependencies": {
     "@scaleleap/config": "2.0.8"
