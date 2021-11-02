@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.55](https://github.com/ScaleLeap/puppeteer/compare/v1.1.54...v1.1.55) (2021-11-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency chrome-launcher to v0.14.2 ([5a7dded](https://github.com/ScaleLeap/puppeteer/commit/5a7dded9a8123ca28aecd94a94f30b50db24b4b9))
+
 ## [1.1.54](https://github.com/ScaleLeap/puppeteer/compare/v1.1.53...v1.1.54) (2021-10-19)
 
 
